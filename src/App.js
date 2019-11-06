@@ -9,6 +9,10 @@ class App extends React.Component {
 		this.total = this.total.bind(this);
 		this.state = {
 			total: 0,
+			productList: [
+				{ name: 'Asus Rog String G', price: '73999' },
+				{ name: 'Asus zenfone Max pro m2', price: '12999' },
+			],
 		};
 	}
 
@@ -21,24 +25,25 @@ class App extends React.Component {
 	}
 
 	render() {
+		var temp = this;
+		var products = this.state.productList.map(product => {
+			return (
+				<Product
+					name={product.name}
+					price={product.price}
+					handlefun={this.showData}
+					handleTotal={this.total}
+				/>
+			);
+		});
+
 		return (
 			<div className='App'>
 				<h1>Shopping Cart</h1>
 				<hr />
 				<hr />
 
-				<Product
-					name='Asus Rog Strik G'
-					price='74999'
-					handlefun={this.showData}
-					handleTotal={this.total}
-				/>
-				<Product
-					name='Asus zenfone max pro m2'
-					price='13999'
-					handlefun={this.showData}
-					handleTotal={this.total}
-				/>
+				{products}
 				<Total total={this.state.total} />
 			</div>
 		);
