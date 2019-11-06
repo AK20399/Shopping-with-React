@@ -4,14 +4,14 @@ class total extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			count: 0,
+			total: 123,
 		};
 	}
 
 	render() {
 		return (
 			<div>
-				<h3>total Working</h3>
+				<h1>Total:{this.state.total}</h1>
 			</div>
 		);
 	}

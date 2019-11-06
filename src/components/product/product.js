@@ -8,10 +8,17 @@ class product extends React.Component {
 		};
 	}
 
+	buy() {
+		this.setState({ count: this.state.count + 1 });
+	}
+
 	render() {
 		return (
 			<div>
-				<h3>Product Working</h3>
+				<h2>Product Name</h2>
+				<h3>Purchased : {this.state.count}</h3>
+				<button onClick={this.buy.bind(this)}>Buy</button>
+				<hr />
 			</div>
 		);
 	}
