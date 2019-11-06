@@ -3,15 +3,13 @@ import React from 'react';
 class total extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-			total: 123,
-		};
+		this.state = {};
 	}
 
 	render() {
 		return (
 			<div>
-				<h1>Total:{this.state.total}</h1>
+				<h1>Total:{this.props.total}</h1>
 			</div>
 		);
 	}

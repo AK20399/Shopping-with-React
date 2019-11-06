@@ -10,6 +10,7 @@ class product extends React.Component {
 
 	buy() {
 		this.setState({ count: this.state.count + 1 });
+		this.props.handleTotal(this.props.price);
 	}
 
 	show() {
