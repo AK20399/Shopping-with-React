@@ -1,6 +1,7 @@
 import React from 'react';
 import Product from './components/product/product';
 import Total from './components/total/total';
+import ProductForm from './components/productForm/productForm';
 import './App.css';
 
 class App extends React.Component {
@@ -43,6 +44,7 @@ class App extends React.Component {
 				<hr />
 				<hr />
 
+				<ProductForm />
 				{products}
 				<Total total={this.state.total} />
 			</div>
