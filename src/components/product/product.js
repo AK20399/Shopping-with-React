@@ -15,7 +15,8 @@ class product extends React.Component {
 	render() {
 		return (
 			<div>
-				<h2>Product Name</h2>
+				<h2>Product Name : {this.props.name}</h2>
+				<h2>Product Price : {this.props.price}</h2>
 				<h3>Purchased : {this.state.count}</h3>
 				<button onClick={this.buy.bind(this)}>Buy</button>
 				<hr />
