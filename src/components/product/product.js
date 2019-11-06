@@ -12,6 +12,10 @@ class product extends React.Component {
 		this.setState({ count: this.state.count + 1 });
 	}
 
+	show() {
+		this.props.handlefun(this.props.name);
+	}
+
 	render() {
 		return (
 			<div>
@@ -19,6 +23,8 @@ class product extends React.Component {
 				<h2>Product Price : {this.props.price}</h2>
 				<h3>Purchased : {this.state.count}</h3>
 				<button onClick={this.buy.bind(this)}>Buy</button>
+				<br />
+				<button onClick={this.show.bind(this)}>Show</button>
 				<hr />
 			</div>
 		);

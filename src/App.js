@@ -9,11 +9,23 @@ class App extends React.Component {
 		this.state = {};
 	}
 
+	showData(name) {
+		alert(`You've Purchased : ${name}`);
+	}
+
 	render() {
 		return (
 			<div className='App'>
-				<Product name='Asus Rog Strik G' price='74999' />
-				<Product name='Asus zenfone max pro m2' price='13999' />
+				<Product
+					name='Asus Rog Strik G'
+					price='74999'
+					handlefun={this.showData}
+				/>
+				<Product
+					name='Asus zenfone max pro m2'
+					price='13999'
+					handlefun={this.showData}
+				/>
 				<Total />
 			</div>
 		);
